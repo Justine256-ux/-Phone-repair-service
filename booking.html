@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Repair - JK Phone Services</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/logo.svg" alt="JK Phone Services Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Book a Repair</h1>
+    <p>Schedule your phone repair appointment online. We'll get you fixed up in no time!</p>
+    
+    <form action="https://formspree.io/f/xpznqjqy" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="device">Device Type:</label>
+        <select id="device" name="device" required>
+          <option value="">Select Device</option>
+          <option value="iphone">iPhone</option>
+          <option value="android">Android</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="issue">Describe the Issue:</label>
+        <textarea id="issue" name="issue" rows="4" required placeholder="Please describe what's wrong with your phone..."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Preferred Time:</label>
+        <select id="time" name="time" required>
+          <option value="">Select Time</option>
+          <option value="9am">9:00 AM</option>
+          <option value="10am">10:00 AM</option>
+          <option value="11am">11:00 AM</option>
+          <option value="12pm">12:00 PM</option>
+          <option value="1pm">1:00 PM</option>
+          <option value="2pm">2:00 PM</option>
+          <option value="3pm">3:00 PM</option>
+          <option value="4pm">4:00 PM</option>
+          <option value="5pm">5:00 PM</option>
+          <option value="6pm">6:00 PM</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Book Appointment</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 JK Phone Services. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
