@@ -325,3 +325,20 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+nav {
+    background-color: #0b0c10; /* Dark background to match the logo circle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.nav-links li a {
+    color: #ffffff; /* Bright white links so they are clearly readable */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #4ba3ff; /* Neon blue highlight on hover to match your logo accent */
+}
