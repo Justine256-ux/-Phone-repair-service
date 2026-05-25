@@ -71,7 +71,7 @@ nav {
   color: var(--primary-color);
 }
 
-.theme-toggle {
+#theme-toggle {
   background: none;
   border: none;
   font-size: 1.5rem;

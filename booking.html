@@ -28,54 +28,41 @@
     <h1>Book a Repair</h1>
     <p>Schedule your phone repair appointment online. We'll get you fixed up in no time!</p>
     
-    <form action="https://formspree.io/f/xpznqjqy" method="POST">
-      <div class="form-group">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-      </div>
-      <div class="form-group">
-        <label for="device">Device Type:</label>
-        <select id="device" name="device" required>
-          <option value="">Select Device</option>
-          <option value="iphone">iPhone</option>
-          <option value="android">Android</option>
-          <option value="other">Other</option>
+    <!-- Form Backend Connection -->
+<form action="https://formsubmit.co" method="POST">
+    <!-- Anti-Spam Honeypot Field -->
+    <input type="text" name="_honey" style="display:none">
+    
+    <!-- Redirects customer back to home page with a success signal -->
+    <input type="hidden" name="_next" value="https://github.io">
+
+    <!-- Your Existing Booking Fields -->
+    <div class="form-group">
+        <label for="device">Device Type</label>
+        <select id="device" name="Device Type" required>
+            <option value="Android">Android</option>
+            <option value="iPhone">iPhone</option>
+            <option value="Other">Other</option>
         </select>
-      </div>
-      <div class="form-group">
+    </div>
+
+    <div class="form-group">
         <label for="issue">Describe the Issue:</label>
-        <textarea id="issue" name="issue" rows="4" required placeholder="Please describe what's wrong with your phone..."></textarea>
-      </div>
-      <div class="form-group">
+        <textarea id="issue" name="Issue Description" placeholder="water" required></textarea>
+    </div>
+
+    <div class="form-group">
         <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required>
-      </div>
-      <div class="form-group">
+        <input type="date" id="date" name="Preferred Date" required>
+    </div>
+
+    <div class="form-group">
         <label for="time">Preferred Time:</label>
-        <select id="time" name="time" required>
-          <option value="">Select Time</option>
-          <option value="9am">9:00 AM</option>
-          <option value="10am">10:00 AM</option>
-          <option value="11am">11:00 AM</option>
-          <option value="12pm">12:00 PM</option>
-          <option value="1pm">1:00 PM</option>
-          <option value="2pm">2:00 PM</option>
-          <option value="3pm">3:00 PM</option>
-          <option value="4pm">4:00 PM</option>
-          <option value="5pm">5:00 PM</option>
-          <option value="6pm">6:00 PM</option>
-        </select>
-      </div>
-      <button type="submit" class="btn">Book Appointment</button>
-    </form>
+        <input type="time" id="time" name="Preferred Time" required>
+    </div>
+
+    <button type="submit" class="btn-booking">Book Appointment</button>
+</form>
   </main>
 
   <footer>

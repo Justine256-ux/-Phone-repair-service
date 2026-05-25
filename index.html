@@ -20,7 +20,7 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="booking.html">Booking</a></li>
       </ul>
-      <button id="theme-toggle">🌙</button>
+      <button type="button" id="theme-toggle">🌙</button>
     </nav>
   </header>
 
@@ -55,5 +55,16 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script>
+    // Checks if the website URL ends with '?status=success'
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('status') === 'success') {
+        // Creates a beautiful browser alert notification
+        alert("🎉 Thank you! Your request has been successfully submitted. We will contact you shortly to confirm your booking.");
+        
+        // Cleans up the URL path so the popup doesn't appear again if they refresh
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+</script>
 </body>
 </html>
