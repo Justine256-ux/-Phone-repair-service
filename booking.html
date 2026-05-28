@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book phone repair appointment at KJM Phone Services in Kira. Screen, battery, water damage. Quick turnaround, 30-day warranty.">
-  <title>Book Phone Repair Appointment | KJM Phone Services</title>
+  <meta name="description" content="Book a phone repair service online with KJM Phone Services in Kira Town. Screen, battery, and software troubleshooting slots.">
+  <title>Book a Repair | KJM Phone Services</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav>
       <div class="logo">
-        <img src="images/logo.png.jpg" alt="JK Phone Services Logo">
+        <img src="images/logo.png.jpg" alt="KJM Phone Services" style="height: 50px; width: auto; object-fit: contain;">
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -25,66 +25,75 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Book a Repair</h1>
-    <p>Schedule your phone repair appointment online. We'll get you fixed up in no time!</p>
+  <main style="max-width: 600px; margin: 2rem auto; padding: 0 20px;">
+    <h1>Book a Repair Slot</h1>
+    <p>Fill out the details below to schedule your instant diagnostic check at Kira Roundabout.</p>
     
-    
+    <!-- Using your working Formspree endpoint ID: mjgzavlk -->
+    <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem;">
+      
+      <!-- Redirect back to booking page on success -->
+      <input type="hidden" name="_next" value="https://netlify.app">
 
-    <form action="https://formspree.io/f/mjgzavlk" method="POST">
-<input type="hidden" name="_next" value="https://github.io">
-  
-    
-    <!-- Redirects customer back to home page with a success signal -->
+      <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      
+      <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
 
+      <div class="form-group">
+          <label for="phone">WhatsApp / Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 0707230876" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
 
-    <!-- Your Existing Booking Fields -->
-    <div class="form-group">
-        <label for="device">Device Type</label>
-        <select id="device" name="Device Type" required>
-            <option value="Android">Android</option>
-            <option value="iPhone">iPhone</option>
-            <option value="Other">Other</option>
-        </select>
-    </div>
+      <div class="form-group">
+          <label for="device">Device Brand & Model:</label>
+          <input type="text" id="device" name="device_model" placeholder="e.g. iPhone 13, Samsung A54" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
 
-    <div class="form-group">
-        <label for="issue">Describe the Issue:</label>
-        <textarea id="issue" name="Issue Description" placeholder="water" required></textarea>
-    </div>
+      <div class="form-group">
+          <label for="service">Required Service:</label>
+          <select id="service" name="service_type" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; background: white;">
+              <option value="" disabled selected>Select service needed</option>
+              <option value="Screen Replacement">Screen Replacement (From 20k)</option>
+              <option value="Battery Replacement">Battery Replacement (From 30k)</option>
+              <option value="Software Services">Software Services (From 10k)</option>
+              <option value="Water Damage Repair">Water Damage Repair (From 30k)</option>
+              <option value="Professional Diagnostics">Professional Diagnostics (From 10k)</option>
+          </select>
+      </div>
 
-    <div class="form-group">
-        <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="Preferred Date" required>
-    </div>
+      <div class="form-group">
+          <label for="date">Preferred Repair Date:</label>
+          <input type="date" id="date" name="appointment_date" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
 
-    <div class="form-group">
-        <label for="time">Preferred Time:</label>
-        <input type="time" id="time" name="Preferred Time" required>
-    </div>
+      <div class="form-group">
+        <label for="message">Describe the Issue (Optional):</label>
+        <textarea id="message" name="issue_description" rows="4" placeholder="Tell us what is wrong with your phone..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+      </div>
 
-    <button type="submit" class="btn">Book Appointment</button>
-</form>
-
-
-<div style="text-align: center; margin-top: 1.5rem;">
-    <p style="margin-bottom: 0.5rem; color: #555;">Or chat with us instantly:</p>
-    <a href="https://wa.me/256742090971?text=Hi%2C%20I%20want%20to%20book%20a%20phone%20repair%20appointment." target="_blank" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; gap: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-        💬 Chat on WhatsApp
-    </a>
-</div>
-
+      <button type="submit" class="btn" style="padding: 12px; background: #007bff; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Confirm Booking</button>
+    </form>
   </main>
 
   <footer>
     <p>&copy; 2026 KJM Phone Services. All rights reserved.</p>
   </footer>
 
-  <!-- Sticky WhatsApp Button -->
-  <a href="https://wa.me/256707230876?text=Hi%2C%20I%20want%20to%20book%20a%20phone%20repair%20appointment." target="_blank" class="sticky-whatsapp" title="Chat on WhatsApp">
-    💬
-  </a>
-
   <script src="js/script.js"></script>
+  
+  <!-- Success alert popup custom built for the Booking Page -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('status') === 'success') {
+        alert("🎉 Booking Submitted! Thank you for choosing KJM Phone Services. Jeff will look over your details and confirm your slot via text shortly.");
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  </script>
 </body>
 </html>
