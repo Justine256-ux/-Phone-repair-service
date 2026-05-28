@@ -342,3 +342,10 @@ nav {
 .nav-links li a:hover {
     color: #4ba3ff; /* Neon blue highlight on hover to match your logo accent */
 }
+.nav-logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  /* This blends away the solid white background on light-themed websites */
+  mix-blend-mode: multiply; 
+}
